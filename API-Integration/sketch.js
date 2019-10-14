@@ -16,7 +16,7 @@ var xSun = 680;
 function preload() {
   let url = "http://api.openweathermap.org/data/2.5/weather?q=new%20york,new%20york&units=imperial&appid=abef3a83c03af1038e36ef62743c20a6"
   loadJSON(url, processData);
-  img = loadImage("nyc.png");
+  img = loadImage("./nyc.png");
 }
 
 function processData(data){
