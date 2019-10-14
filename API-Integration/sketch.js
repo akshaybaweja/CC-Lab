@@ -68,11 +68,11 @@ function draw() {
   text("New York City", 680, 270);
 
 
-  if (description == "clear sky" || description == "sunny") {
+  if (description == "clear sky") {
     xSun = 500;
   }
 
-  if (description == "clear sky" || description == "sunny" || description == "broken clouds") {
+  if (description == "clear sky" || description == "broken clouds") {
     fill(255, 212, 0);
     ellipse(xSun, 100, 150, 150);
   }
