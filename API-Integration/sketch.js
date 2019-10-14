@@ -22,7 +22,7 @@ function preload() {
 function processData(data){
   console.log(data);
   temp = data.main.temp;
-  description = data.weather[0].main;
+  description = data.weather[0].description;
 }
 
 function setup() {
@@ -34,7 +34,7 @@ function draw() {
   background(135, 206, 250);
   noStroke();
   
-  if (description == "Cloudy" || description == "Light rain" || description == "Moderate rain") {
+  if (description == "Cloudy" || description == "light rain" || description == "Moderate rain") {
     background(172, 177, 183);
   }
 
@@ -97,7 +97,7 @@ function draw() {
     }
   }
 
-  if (description == "Light rain") {
+  if (description == "light rain") {
     fill(20, 160, 255, 100);
     ellipse(850, rainY, 8, 20);
     ellipse(550, rainY - 200, 8, 20);
@@ -115,11 +115,11 @@ function draw() {
     xSun = 850;
   }
 
-  if (description == "Cloudy" || description == "Light rain" || description == "Moderate rain" || description == "Overcast") {
+  if (description == "Cloudy" || description == "light rain" || description == "Moderate rain" || description == "Overcast") {
     translate(20, 0);
   }
 
-  if (description == "Cloudy" || description == "Light rain" || description == "Partly cloudy" || description == "Moderate rain" || description == "Overcast") {
+  if (description == "Cloudy" || description == "light rain" || description == "Partly cloudy" || description == "Moderate rain" || description == "Overcast") {
     fill(cloudColor, 240);
 
     y = noise(m) * 90;
