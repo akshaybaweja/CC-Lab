@@ -34,11 +34,11 @@ function draw() {
   background(135, 206, 250);
   noStroke();
   
-  if (description == "Cloudy" || description == "light rain" || description == "Moderate rain") {
+  if (description == "few clouds" || description == "light rain" || description == "moderate rain") {
     background(172, 177, 183);
   }
 
-  if (description == "Overcast" || description == "Moderate rain") {
+  if (description == "overcast clouds" || description == "moderate rain") {
     background(220);
     cloudColor = 180;
 
@@ -68,16 +68,16 @@ function draw() {
   text("New York City", 680, 270);
 
 
-  if (description == "Clear" || description == "Sunny") {
+  if (description == "clear sky" || description == "sunny") {
     xSun = 500;
   }
 
-  if (description == "Clear" || description == "Sunny" || description == "Partly cloudy") {
+  if (description == "clear sky" || description == "sunny" || description == "broken clouds") {
     fill(255, 212, 0);
     ellipse(xSun, 100, 150, 150);
   }
 
-  if (description == "Moderate rain") {
+  if (description == "moderate rain") {
     cloudColor = 180;
     fill(20, 160, 255, 100);
     ellipse(700, rainY, 8, 20);
@@ -111,15 +111,15 @@ function draw() {
     }
   }
 
-  if (description == "Partly cloudy") {
+  if (description == "broken clouds") {
     xSun = 850;
   }
 
-  if (description == "Cloudy" || description == "light rain" || description == "Moderate rain" || description == "Overcast") {
+  if (description == "few clouds" || description == "light rain" || description == "moderate rain" || description == "overcast clouds") {
     translate(20, 0);
   }
 
-  if (description == "Cloudy" || description == "light rain" || description == "Partly cloudy" || description == "Moderate rain" || description == "Overcast") {
+  if (description == "few clouds" || description == "light rain" || description == "broken clouds" || description == "moderate rain" || description == "overcast clouds") {
     fill(cloudColor, 240);
 
     y = noise(m) * 90;
