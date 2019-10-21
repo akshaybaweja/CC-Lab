@@ -14,9 +14,17 @@ var cloudColor = 250;
 var xSun = 680;
 
 function preload() {
-  let url = "https://api.openweathermap.org/data/2.5/weather?q=new%20york,new%20york&units=imperial&appid=abef3a83c03af1038e36ef62743c20a6"
-  loadJSON(url, processData);
+  getWeatherData("new york")
   img = loadImage("./nyc.png");
+}
+
+function getWeatherData(city){
+  let api = "https://api.openweathermap.org/data/2.5/weather?q=";
+  let units = "&units=imperial";
+  let key = "&appid=abef3a83c03af1038e36ef62743c20a6";
+
+  let url = encodeURI(api + city + units + key);
+  loadJSON(url, processData);
 }
 
 function processData(data){
